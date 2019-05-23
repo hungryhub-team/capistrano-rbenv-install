@@ -40,7 +40,7 @@ namespace :rbenv do
   desc 'Install ruby'
   task :install_ruby do
     on roles fetch(:rbenv_roles) do
-      execute rbenv_bin_executable_path, :install, fetch(:rbenv_ruby), "--skip-version"
+      execute rbenv_bin_executable_path, :install, fetch(:rbenv_ruby), "--skip-existing"
     end
   end
 
