@@ -42,7 +42,7 @@ namespace :rbenv do
     on roles fetch(:rbenv_roles) do
       next if test "[ -d #{fetch(:rbenv_ruby_dir)} ]"
       invoke 'rbenv:update_ruby_build'
-      execute rbenv_bin_executable_path, :install, "-s", fetch(:rbenv_ruby)
+      execute rbenv_bin_executable_path, :install, fetch(:rbenv_ruby), "-s"
     end
   end
 
