@@ -60,6 +60,6 @@ namespace :rbenv do
     invoke 'rbenv:install_bundler'
   end
 
-  # before 'rbenv:validate', 'rbenv:install'
+  before 'rbenv:validate', 'rbenv:install'
   # before 'bundler:map_bins', 'rbenv:install' if Rake::Task.task_defined?('bundler:map_bins')
 end
