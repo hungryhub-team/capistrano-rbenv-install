@@ -56,12 +56,12 @@ namespace :rbenv do
 
   desc 'Install rbenv, ruby build and ruby version'
   task :install do
-    invoke 'rbenv:install_rbenv'
-    invoke 'rbenv:install_ruby_build'
+    # invoke 'rbenv:install_rbenv'
+    # invoke 'rbenv:install_ruby_build'
     invoke 'rbenv:install_ruby'
     invoke 'rbenv:install_bundler'
   end
 
-  before 'rbenv:validate', 'rbenv:install'
-  before 'bundler:map_bins', 'rbenv:install' if Rake::Task.task_defined?('bundler:map_bins')
+  # before 'rbenv:validate', 'rbenv:install'
+  # before 'bundler:map_bins', 'rbenv:install' if Rake::Task.task_defined?('bundler:map_bins')
 end
